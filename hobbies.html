@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hobbies</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style.css">
+        <style>
+            section{
+                padding: 1rem;
+                width: 100%;
+                margin: 0rem;
+            }
+            #hobbies{
+                width: 100%;
+                background: white;
+                border-radius: 20px;
+                display: inline-flex;
+                justify-content: space-around;
+            }
+            #hobbies div{
+                margin-left: 3rem;
+                margin-right: 3rem;
+                font-family: "adhunik";
+                font-weight: 700;
+                font-size: 15pt;
+            }
+            #hobbies div label{
+                font-family: "adhunik";
+            }
+            .card{
+                border-radius: 20px;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+            .fade-in{
+              opacity: 1;
+              transform: translateY(0);
+            }
+            .card div p{
+              font-family: 'Zhi';
+              font-size: 15pt;
+              font-weight: 500;
+            }
+
+            .card div a{
+              font-family: 'Zhi';
+              font-size: 15pt;
+              font-weight: 500;
+            }
+
+            .card-img-top{
+                width: 100%;
+                height: 20vw;
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" style="background-color: white;">
+              <a class="navbar-brand" href="#">
+                <img id="logo" src="./static/logo.png" alt="logo" width="62.7" height="45" class="d-inline-block align-text-top"> 
+                <span id="logo-name">ARIF</span>
+            </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-5">
+                  <li class="nav-item">
+                    <a class="nav-link"  href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Hobby</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="./education.html">Education</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./feedback.html">Feedback</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <section class="container-lg">
+            <div id="hobbies">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="music" id="music-check">
+                    <label class="form-check-label" for="music-check">
+                      Listening to music
+                    </label>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="movies" id="movies-check">
+                    <label class="form-check-label" for="movies-check">
+                      Watching movies
+                    </label>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="stories" id="stories-check">
+                    <label class="form-check-label" for="stories-check">
+                      Reading stories
+                    </label>
+                </div>
+                <button type="button" class="btn btn-primary" id="learnMoreBtn">Learn More</button>
+                
+            </div>
+        </section>
+        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+            <div class="col-lg-4" style=" padding: 1rem 5rem 0rem 3rem;">
+                <div class="card" id="music-desc">
+                    <img src="./static/guitar.jpg"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">I like listening to music of various genres.Some of my favourite singers being Ustad Rahat Fateh Ali Khan, Sonu Nigam, KK etc </p>
+                      <a id="close-music-desc" href="#" class="btn btn-primary">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="padding: 1rem 5.5rem 0rem 1.5rem;">
+                <div class="card" id="movies-desc">
+                    <img src="./static/cinema.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">I love watching movies escpecially from sci-fi & horror genre. <a href="https://www.imdb.com/title/tt0133093/" target="_blank">The Matrix(1999)</a>, <a href="https://www.imdb.com/title/tt2911666/" target="_blank">John Wick(2014)</a> & <a href="https://www.imdb.com/title/tt0084787/" target="_blank">The Thing(1982)</a> are my all time favourites</p>
+                      <a href="#" id="close-movies-desc" class="btn btn-primary">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="padding: 1rem 7rem 0rem 1rem;">
+                <div class="card" id="stories-desc">
+                    <img src="./static/book.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">I enjoy delving into the narratives found in the subreddits r/nosleep and r/shortscarystories. Check out this story: <a href="https://www.reddit.com/r/nosleep/comments/7txais/a_shattered_life/?utm_source=share&utm_medium=web2x&context=3" target="_blank">A Shattered Life</a></p>
+                      <a href="#" id="close-stories-desc" class="btn btn-primary">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js" async defer></script>
+    </body>
+</html>

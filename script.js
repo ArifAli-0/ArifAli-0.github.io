@@ -18,6 +18,7 @@ document.getElementById('close-stories-desc').addEventListener('click', () => {
     stories.checked=false
 })
 
+
 btn.addEventListener('click', () =>{
     if(music.checked){
         document.getElementById('music-desc').classList.add('fade-in')

@@ -18,7 +18,7 @@
             margin-bottom: 1rem;
           }
           #feedback-img{
-              height: 500px;
+              height: auto;
               width: 100%;
               border-radius: 20px 0px 0px 20px;
           }
@@ -27,7 +27,8 @@
               align-items: center;
               justify-content: center;
               width: 650px;
-              height: 500px;
+              height: 520px;
+              overflow: hidden;
               padding: 0;
               margin: auto;
               margin-top: 2rem;
@@ -81,29 +82,39 @@
               </div>
             </div>
         </nav>
+        <div id="successAlert"></div>
         <div id="feedback-container">
             <div class="image-section">
                 <img src="./static/feedback.jpg" alt="feedback" id="feedback-img">
             </div>
             <div class="form-section text-center">
-                <h3 id="form-heading" class="mb-5">Feedback</h3>
-                <form>
+                <h3 id="form-heading" class="mt-3 mb-4">Feedback</h3>
+                <form id="feedbackform" novalidate>
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="nameInput" placeholder="John Doe">
+                      <input type="text" class="form-control" id="nameInput" placeholder="John Doe" required>
                       <label for="nameInput">Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="number" class="form-control" id="phoneInput" placeholder="Your contact number">
-                      <label for="phoneInput">Contact No.</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave your valuable feedback here" id="feedbackarea" rows="5" style="height: 100%;"></textarea>
-                        <label for="feedbackarea">Feedback</label>
+                      <div class="invalid-feedback">
+                        PLease enter your name!
                       </div>
-                    <button type="submit" class="btn btn-lg btn-primary ps-5 pe-5 w-100">Submit</button>
-                  </form>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="phoneInput" placeholder="Your contact number" required>
+                      <label for="phoneInput">Contact No.</label>
+                      <div class="invalid-feedback">
+                        PLease enter your contact no.!
+                      </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave your valuable feedback here" id="feedbackarea" rows="5" style="height: 100%;" required></textarea>
+                        <label for="feedbackarea">Feedback</label>
+                        <div class="invalid-feedback">
+                          PLease enter your feedback!
+                        </div>
+                      </div>
+                    <button type="submit" class="btn btn-lg btn-primary mb-5 ps-5 pe-5 w-100">Submit</button>
+                </form>
             </div>
         </div>
-        <script src="" async defer></script>
+        <script src="./script.js" async defer></script>
     </body>
 </html>

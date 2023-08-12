@@ -2,6 +2,35 @@ const btn = document.getElementById('learnMoreBtn')
 const music = document.getElementById('music-check')
 const movies = document.getElementById('movies-check')
 const stories = document.getElementById('stories-check')
+const feedback_form = document.getElementById('feedbackform')
+const alert = document.getElementById('successAlert')
+const appendAlert = (message, type) => {
+    console.log("Showing alert")
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-dismissible alert-${type} mt-3 p-3 m-5 fade show">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      '</div>'
+    ].join('')
+  
+    alert.append(wrapper)
+}
+
+feedback_form.addEventListener("submit", (event) => {
+    console.log("form submitted");
+    event.preventDefault();
+    event.stopPropagation();
+    if (feedback_form.checkValidity()) {
+        const name = document.getElementById('nameInput').value
+        console.log(name)
+        feedback_form.classList.remove('was-validated');
+        const message = `Thanks ${name} for your valuable feedback!`
+        appendAlert(message, 'success')
+    }
+    else
+        feedback_form.classList.add('was-validated');
+});
 
 document.getElementById('close-music-desc').addEventListener('click', () => {
     document.getElementById('music-desc').classList.remove('fade-in')
